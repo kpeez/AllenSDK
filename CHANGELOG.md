@@ -1,76 +1,98 @@
 # Change Log
+
 All notable changes to this project will be documented in this file.
 
 ## [2.13.6] = 2022-08-04
+
 - bugfix when accessing stimulus presentations table for vcn data
 - updates vbn notebooks
-- 
+-
+
 ## [2.13.5] = 2022-07-27
+
 - Add support for visual behavior neuropixels data
-- 
+-
+
 ## [2.13.4] = 2022-02-23
+
 - Bug fix in ecephys
 - Added support for VBN source density jobs.
 - Bug fix for pg8000
 
 ## [2.13.3] = 2022-02-02
+
 - Add ability to extract running speed from mulit-stimulus experiments
 - Compatible with pandas 1.4
 
 ## [2.13.2] = 2022-01-03
+
 - Fixes bug that caused file paths on windows machines to be incorrect in Visual behavior user-facing classes
 - Updates to support MESO.2
 - Loosens/updates required versions for several dependencies
 - Updates in order to generate valid NWB files for Neuropixels Visual Coding data collected between 2019 and 2021
 
 ## [2.13.1] = 2021-10-04
+
 - Fixes bug that was preventing the BehaviorSession from properly instantiating passive sessions.
 
 ## [2.13.0] = 2021-09-22
+
 - Major internal refactor to BehaviorSession, BehaviorOphysExperiment classes. Implements DataObject pattern for fetching and serialization of data.
 
 ## [2.12.4] = 2021-09-21
+
 - Documentation changes ahead of SWDB 2021
 - Bugfix to CloudCache; it is now possible for multiple users to share a cache.
 
 ## [2.12.3] = 2021-08-20
+
 - Reordered columns in Visual Behavior metadata tables to be more helpful
 
 ## [2.12.2] = 2021-08-13
+
 - fix to how from_lims API gets OPhys experiment metadata. Preserves relationship between OPhys experiments and failed containers
 
 ## [2.12.1] = 2021-08-11
+
 - minor fix to cloud cache
 
 ## [2.12.0] = 2021-08-11
+
 - Added ability to specify a static cache directory (use_static_cache=True) to instantiate VisualBehaviorOphysProjectCache.from_local_cache()
 - Added 'experience_level', 'passive' and 'image_set' columns to ophys_experiments_table
 - Added 'ophys_cells_table' metadata table to track the relationship between ophys_experiment_id and cell_specimen_id
 
 ## [2.11.3] = 2021-08-04
+
 - Bugfixes related to NWB creation for BehaviorSessions
 
 ## [2.11.2] = 2021-05-21
+
 - Fixed mkdir error for non-existing ecephys upload directory
 
 ## [2.11.1] = 2021-05-20
+
 - Refactored the schema for the ecephys copy utility to avoid raising an error when a previous output file already exists.
 
 ## [2.11.0] = 2021-05-13
+
 - python 3.8 compatibility
 - CloudCache (the class supporting cloud-based data releases) is now smart enough to construct symlinks between files that are identical across dataset versions (rather than downloading duplicate copies of files).
 - VisualBehavioOphysProjectCache supports user-controlled switching between dataset versions.
 
 ## [2.10.3] = 2021-04-23
+
 - Adds restriction to require hdmf version to be strictly less than 2.5.0 which accidentally introduced a major version breaking change
 
 ## [2.10.2] = 2021-03-25
+
 - This version marks the release of Visual Behavior Optical Physiology data! For more details please visit the: [Visual Behavior - Optical Physiology Project Page](https://allensdk.readthedocs.io/en/latest/visual_behavior_optical_physiology.html)
 - update documentation to support visual behavior data release
 - Fixes a bug with the dictionary returned by BehaviorSession get get_performance_metrics() method
 - Adds docstrings to the BehaviorSession get_performance_metrics(), get_rolling_performance_df(), and get_reward_rate() methods
 
 ## [2.10.1] = 2021-03-23
+
 - changes name of BehaviorProjectCache to VisualBehaviorOphysProjectCache
 - changes VisualBehaviorOphysProjectCache method get_session_table() to get_ophys_session_table()
 - changes VisualBehaviorOphysProjectCache method get_experiment_table() to get_ophys_experiment_table()
@@ -79,18 +101,22 @@ All notable changes to this project will be documented in this file.
 - Adds project metadata writer
 
 ## [2.9.0] = 2021-03-08
-- Improvements to BehaviorProjectCache 
+
+- Improvements to BehaviorProjectCache
 
 ## [2.9.0] = 20201-03-08
+
 - Updates to Session metadata; refactors implementation to use class rather than dict internally
 - Fixes a bug that was preventing Allen Institute Windows users from accessing gratings images
 
 ## [2.8.0] = 2021-02-25
+
 - Created lookup table to get monitor_delay for cases where calculation from data fails
 - If sync timestamp file has more timestamps than eye tracking moving has frame, trim excess timestamps (up to 15)
 - Session API returns both warped and unwarped stimulus images, and both are written to NWB
 
 ## [2.7.0] = 2021-02-19
+
 - Refactored behavior and ophys session and data APIs to remove a circular inheritance issue
 - Fixed segmentation mask and roi_mask misregistration in 'BehaviorOphysSession'
 - Replaces BehaviorOphysSession.get_roi_masks() method with roi_masks property
@@ -104,62 +130,76 @@ All notable changes to this project will be documented in this file.
 - Fixed a test for checking that Behavior and BehaviorOphysSessions contain the same data regardless of which API (LIMS/JSON/NWB) is used. Also fixed resulting failure cases.
 
 ## [2.6.0] = 2021-02-05
+
 - Adds ability to write and read behavior only NWB files
 - Adds eye tracking ellipse fits and metadata as new NWB data stream
 - OPhys Behavior data retrieval methods no longer depend on ROIs being ordered identically in different files.
 
 ## [2.5.0] = 2021-01-29
--  Adds unfiltered running speed as new data stream
--  run_demixing gracefully ignores any ROIs that are not in the input trace file
+
+- Adds unfiltered running speed as new data stream
+- run_demixing gracefully ignores any ROIs that are not in the input trace file
 
 ## [2.4.1] = 2021-01-04
--  update deprecated call to scipy.spatial.transform.Rotation.as_dcm() to .as_matrix()
+
+- update deprecated call to scipy.spatial.transform.Rotation.as_dcm() to .as_matrix()
 
 ## [2.4.0] = 2020-12-21
+
 - When running raster_plot on a spike_times dataframe, the spike times from each unit are plotted twice. (thank you @dgmurx)
 - improvements and fixes to behavior ophys NWB files.
 - improvements and fixes to BehaviorProjectCache tables including new column "donor_id"
 - implemented a timeout to obtaining an ecephys session. (thank you @wesley-jones)
-- big overhaul of how Behavior and BehaviorOphys classes are structured for the visual behavior project. See https://github.com/AllenInstitute/AllenSDK/pull/1789
+- big overhaul of how Behavior and BehaviorOphys classes are structured for the visual behavior project. See <https://github.com/AllenInstitute/AllenSDK/pull/1789>
 
 ## [2.3.3] = 2020-11-12
+
 ### Bug Fixes
+
 - (Internal) Fixed a bug in mesoscope processing where the ophys acquisition frames were being truncated
 prior to splitting, resulting in many fewer than expected acquisition frames.
 
 ## [2.3.2] = 2020-10-19
 
 ### Bug Fixes
+
 - (Internal) Fixed a running\_processing bug for behavior ophys experiments when the input data would have one more encoder entry than timestamp. The behavior of the code now matches what the warning says.
 
 ## [2.3.1] = 2020-10-13
 
 ### Bug Fixes
+
 - (Internal) Fixed a write\_nwb bug for behavior ophys experiments involving the BehaviorOphysJsonApi expecting a mesoscope-specific method.
 
 ## [2.3.0] = 2020-10-09
 
 ### Added
+
 - Adds load sync data for individual plane sets to relate accurate event timings to mesoscope data.
 - Adds public API method to access the behavior\_session\_id from an instance of BehaviorOphysSession.
 
 ### Changes
+
 - Visual behavior running speed is now low-pass filtered at 10Hz. The raw running speed data is still available. The running speed is corrected for encoder threshold croissing artifacts.
 - Support for stimulus gratings for visual behavior.
 - Updates to some visual behavior pynwb implementations.
 
 ### Bug Fixes
+
 - Fixed an eye-tracking sync problem.
 
 ## [2.2.0] = 2020-09-03
 
 ### Added
+
 - AllenSDK HTTP engine streaming requests now include a progress bar.
 
 ### Changed
+
 - (Internal) Behavior Ophys Sessions no longer have a dependence on the `segmentation_mask_image` file (provided by LIMS) when trying to write NWB files.
 
 ### Bug Fixes
+
 - (Internal) `response_time` of a trial in behavior-only or behavior + ophys sessions is now the first lick of the trial (for non-"aborted" trials). If no lick occurred or if the trial is "aborted", `response_time` is `NaN`.
 - Resolve `ImportError: cannot import name 'MultiContainerInterface' from 'hdmf.container'` errors by removing explicit version bounds on the `hdmf` package.
 - The optical physiology 2-photon trace demixer has been modified to be more memory friendly and should no longer result in out of memory errors when trying to demix very large movie stacks.
@@ -168,6 +208,7 @@ prior to splitting, resulting in many fewer than expected acquisition frames.
 ## [2.1.0] = 2020-07-16
 
 ### Added
+
 - Behavior Ophys NWB File writing capability fixes for updated PyNWB and HDMF versions
 - Added warning if using outdated Visual Coding Neuropixels NWB files
 - Added documentation file for Visual Behavior terms in AllenSDK for quick lookup
@@ -175,10 +216,12 @@ prior to splitting, resulting in many fewer than expected acquisition frames.
 ## [2.0.0] = 2020-06-11
 
 ### Added
+
 - CCF locations for ecephys neuropixels electrodes have been added to their respective nwb electrodes tables
 - Examples for accessing eye tracking ellipse fit and screen gaze location data have been added to ecephys example notebooks
 
 ### Changed
+
 - pynwb and hdmf version pinning has been relaxed
 - The organization of data for ecephys neuropixels Neurodata Without Borders (NWB) files has been significantly changed to conform with NWB specifications and best practices
 
@@ -188,36 +231,43 @@ Due to newer versions of pynwb/hdmf having issues reading previously released Vi
 ## [1.8.0] = 2020-06-06
 
 ### Added
+
 - The biophysical module can now run both current and legacy all-active models.
 - Internal users can now access `date_of_acquisition` for behavior-only Session data.
 - A pull request template was added to the repository.
 
 ### Changed
+
 - The CSV log was removed from `BehaviorProjectCache` (internal users).
 - Duplicated demixer module was deprecated, and test coverage was added.
 - Docker image for AllenSDK was updated.
 
 ### Bug Fixes
+
 - Internal LIMS data served to `BehaviorDataSession` class now all use the same timestamp source
 
 ## [1.7.1] = 2020-05-5
 
 ### Bug Fixes
+
 - Time sync tests were failing because of removed content. Tests were running only on nightly.
 - Notebook tests failing on nightly because of down server, switched tests to production server.
 
 ## [1.7.0] = 2020-04-29
 
 ### Added
+
 - Internal users can now access `eye_tracking` ellipse fit data from behavior + ophys Session objects
 - A new mixin for managing processing parameters for Session objects
 - Added support for additional sync file line labels
 
 ### Changed
+
 - Monitor delay calculation is updated to properly handle photodiode streams that end
 on a rising edge. We are no longer providing a default delay value in case of error.
 
 ### Bug Fixes
+
 - experiment\_table from behavior project cache has NaNs in the 'imaging\_depth' column for MultiScope experiments due to incorrect join in behavior\_project\_lims\_api.py and 4 other places where ophys\_sessions was incorrectly queried for imaging\_depth\_id
 - get_keys method for sync datasets was returning the wrong line labels and creating incorrect key, value pairs for
 data loading from sync files
@@ -225,111 +275,127 @@ data loading from sync files
 ## [1.6.0] = 2020-03-23
 
 ### Added
+
 - tutorial for optotagging for ecephys notebook
 - get\_receptive\_field() method in ecephys receptive field mapping
 
 ### Changed
+
 - remove redundant sham\_change column in behavior sessions.trials table
 - versions for NWB output for ecephys and ophys behavior.
 - monitor delay is now calculated for BehaviorOphysLimsApi rather than defaulting to 0.0351
 
 ### Bug Fixes
+
 - Fixed a bug where auto-rewarded trials were not properly attributed in the rewards property of a visual behavior
 - return None rather than raise exception if no container id was returned from lims id for given ophys id
 - Project caches no longer accept arbitrary keywords
 - matplotloib.pyplot.hist parameter normed no longer supported
 
-
 ## [1.5.0] = 2020-02-10
 
 ### Added
- - Users have an option to provide credentials for accessing the database either explicitly via public API or by setting up the environment variables
+
+- Users have an option to provide credentials for accessing the database either explicitly via public API or by setting up the environment variables
 
 ### Changed
- - Allow users to modify BehaviorDataSession and BehaviorOphysSession data
+
+- Allow users to modify BehaviorDataSession and BehaviorOphysSession data
 
 ### Bug Fixes
- - morphology.apply_affine correctly rescales radii
- - invalid extracellular electrophysiology spikes no longer show up as spikes at time -1
- - (internal) When loading a behavior session, behavior and eye tracking video frame times are assessed from the correct lines
+
+- morphology.apply_affine correctly rescales radii
+- invalid extracellular electrophysiology spikes no longer show up as spikes at time -1
+- (internal) When loading a behavior session, behavior and eye tracking video frame times are assessed from the correct lines
 
 ## [1.3.0] = 2019-12-12
 
-
 ### Added
- - Improved Neuropixels data download performance by enabling asynchronous transfers. Data downloads will now raise timeout errors when data cannot be retrieved in a reasonable timeframe.
+
+- Improved Neuropixels data download performance by enabling asynchronous transfers. Data downloads will now raise timeout errors when data cannot be retrieved in a reasonable timeframe.
 
 ### Changed
- - Updated AllenSDK readme and contributing documentation
+
+- Updated AllenSDK readme and contributing documentation
 
 ### Bug Fixes
- - https://github.com/AllenInstitute/AllenSDK/issues/1214 Fix hanging downloads for Neuropixels NWB files
 
+- <https://github.com/AllenInstitute/AllenSDK/issues/1214> Fix hanging downloads for Neuropixels NWB files
 
 ## [1.0.0] = 2019-10-3
 
 ### Added
- - Support for Brain Observatory - Visual Coding Neuropixels data.
- - https://github.com/AllenInstitute/AllenSDK/issues/447 Implemented improved eye tracking module based on DeepLabCut
+
+- Support for Brain Observatory - Visual Coding Neuropixels data.
+- <https://github.com/AllenInstitute/AllenSDK/issues/447> Implemented improved eye tracking module based on DeepLabCut
 
 ### Changed
- - Python 2.x is no longer supported.
- - statsmodels is now pinned at 0.9.0
+
+- Python 2.x is no longer supported.
+- statsmodels is now pinned at 0.9.0
 
 ### Bug Fixes
- - https://github.com/AllenInstitute/AllenSDK/commit/f76678 Fix integer division bug in receptive field analysis
 
+- <https://github.com/AllenInstitute/AllenSDK/commit/f76678> Fix integer division bug in receptive field analysis
 
 ## [0.16.3] = 2019-5-22
 
 ### Bug Fixes
- - https://github.com/AllenInstitute/AllenSDK/issues/660 Use pillow/Image.resize instead of scipy.misc.imresize
- - https://github.com/AllenInstitute/AllenSDK/issues/659 Same
- - https://github.com/AllenInstitute/AllenSDK/issues/661 Update example notebooks
+
+- <https://github.com/AllenInstitute/AllenSDK/issues/660> Use pillow/Image.resize instead of scipy.misc.imresize
+- <https://github.com/AllenInstitute/AllenSDK/issues/659> Same
+- <https://github.com/AllenInstitute/AllenSDK/issues/661> Update example notebooks
 
 ## [0.16.2] = 2019-4-23
 
 ### Added
- - https://github.com/AllenInstitute/AllenSDK/issues/549 Transforms for tissuecyte registration accessible from allensdk
- - https://github.com/AllenInstitute/AllenSDK/pull/568 Release instructions for future maintainers.
+
+- <https://github.com/AllenInstitute/AllenSDK/issues/549> Transforms for tissuecyte registration accessible from allensdk
+- <https://github.com/AllenInstitute/AllenSDK/pull/568> Release instructions for future maintainers.
 
 ### Changed
- - https://github.com/AllenInstitute/AllenSDK/issues/582 Documentation builds from a yml config in python 3.7
+
+- <https://github.com/AllenInstitute/AllenSDK/issues/582> Documentation builds from a yml config in python 3.7
 
 ### Bug Fixes
- - https://github.com/AllenInstitute/AllenSDK/issues/523 pip no longer fails on new conda environment because of tables
+
+- <https://github.com/AllenInstitute/AllenSDK/issues/523> pip no longer fails on new conda environment because of tables
 
 ## [0.16.1] = 2019-3-12
 
 ### Added
- - Added tools for working with itksnap label descriptions (https://github.com/AllenInstitute/AllenSDK/issues/312)
+
+- Added tools for working with itksnap label descriptions (<https://github.com/AllenInstitute/AllenSDK/issues/312>)
 
 ### Changed
- - Update pytest version number (now requires pytest>=4.1.1)
- - Update numpy version number (now requires numpy>=1.15.1)
- - Removed deprecated functions from BrainObservatoryNwbDataSet
- - Updated documentation
+
+- Update pytest version number (now requires pytest>=4.1.1)
+- Update numpy version number (now requires numpy>=1.15.1)
+- Removed deprecated functions from BrainObservatoryNwbDataSet
+- Updated documentation
 
 ### Bug Fixes
- - https://github.com/AllenInstitute/AllenSDK/issues/256 Examples python3 compatible
- - https://github.com/AllenInstitute/AllenSDK/issues/267 Fix get_cell_specimens filter argument
- - https://github.com/AllenInstitute/AllenSDK/pull/226 Fix pandas sorting behavior warning
- - https://github.com/AllenInstitute/AllenSDK/issues/207 Fix "two celltypes features"
- - https://github.com/AllenInstitute/AllenSDK/issues/273 Fix "make notebook"
- - https://github.com/AllenInstitute/AllenSDK/issues/275 Fix inconsistent numpy requirement
- - https://github.com/AllenInstitute/AllenSDK/issues/295 Fix BiophysicalApi.get_neuronal_models
- - https://github.com/AllenInstitute/AllenSDK/issues/309 Fix tests to use updated pytest
- - https://github.com/AllenInstitute/AllenSDK/issues/307 Fix openjpeg dependency in python3 in the CI build
- - https://github.com/AllenInstitute/AllenSDK/issues/311 Fix locally sparse noise test
- - https://github.com/AllenInstitute/AllenSDK/issues/330 Fix numpy warning message
- - https://github.com/AllenInstitute/AllenSDK/issues/330 Fix Pillow dependency install
- - https://github.com/AllenInstitute/AllenSDK/issues/405 Fix session analysis regression test (passing CI in python2 and python3)
- - https://github.com/AllenInstitute/AllenSDK/issues/420 Fix installation bug resulting from pytables 3.5
- - https://github.com/AllenInstitute/AllenSDK/commit/1ef88046a58a36d870d3f1048a778806d1db2954 Fix scikit-image dependency install
+
+- <https://github.com/AllenInstitute/AllenSDK/issues/256> Examples python3 compatible
+- <https://github.com/AllenInstitute/AllenSDK/issues/267> Fix get_cell_specimens filter argument
+- <https://github.com/AllenInstitute/AllenSDK/pull/226> Fix pandas sorting behavior warning
+- <https://github.com/AllenInstitute/AllenSDK/issues/207> Fix "two celltypes features"
+- <https://github.com/AllenInstitute/AllenSDK/issues/273> Fix "make notebook"
+- <https://github.com/AllenInstitute/AllenSDK/issues/275> Fix inconsistent numpy requirement
+- <https://github.com/AllenInstitute/AllenSDK/issues/295> Fix BiophysicalApi.get_neuronal_models
+- <https://github.com/AllenInstitute/AllenSDK/issues/309> Fix tests to use updated pytest
+- <https://github.com/AllenInstitute/AllenSDK/issues/307> Fix openjpeg dependency in python3 in the CI build
+- <https://github.com/AllenInstitute/AllenSDK/issues/311> Fix locally sparse noise test
+- <https://github.com/AllenInstitute/AllenSDK/issues/330> Fix numpy warning message
+- <https://github.com/AllenInstitute/AllenSDK/issues/330> Fix Pillow dependency install
+- <https://github.com/AllenInstitute/AllenSDK/issues/405> Fix session analysis regression test (passing CI in python2 and python3)
+- <https://github.com/AllenInstitute/AllenSDK/issues/420> Fix installation bug resulting from pytables 3.5
+- <https://github.com/AllenInstitute/AllenSDK/commit/1ef88046a58a36d870d3f1048a778806d1db2954> Fix scikit-image dependency install
 
 ## [0.16.0] = 2018-10-04
 
 ### Added
+
 - BrainObservatoryCache.get_ophys_experiment_events
 - BrainObservatoryCache.get_ophys_experiments and get_experiment_containers accept reporter_lines argument
 - BrainObservatoryCache.ge_ophys_experiment_analysis
@@ -338,12 +404,14 @@ data loading from sync files
 ## [0.14.5] = 2018-06-14
 
 ### Changed
+
 - bumped lower limit of pandas to 0.17, removed upper limit
 - changed CellTypesCache cell data structure to be less nested, more flat. Requires update to manifest and re-download of cells.json.
 - simplified MouseConnectivityCache data structure.  Requires update to manifest and re-download of experiments.json.
 - stopped using deprecated function in SimpleTree
 
 ### Added
+
 - regression tests for Brain Observatory analysis
 
 ## [0.14.4] - 2018-01-30
@@ -396,7 +464,6 @@ ABS-85; allow variable long square start time in ephys feature extractor
 - BrainObservatoryCache.get_ophys_experiments accepts a list of cell_specimen_ids for additional filtering
 - json_utilities uses simplejson for better NaN handling
 
-
 ## [0.13.1] - 2017-03-20
 
 ### Fixed
@@ -413,7 +480,7 @@ ABS-85; allow variable long square start time in ephys feature extractor
 
 ### Changed
 
-- Ontology has been deprecated in favor of StructureTree. 
+- Ontology has been deprecated in favor of StructureTree.
 - MouseConnectivityCache uses StructureTree internally (ontology-based methods are deprecated)
 - CellTypesCache and MouseConnectivityCache use cacher decorator
 - GlifApi has stateless methods now.  Old methods are deprecated.  
@@ -433,7 +500,7 @@ ABS-85; allow variable long square start time in ephys feature extractor
 ### Changed
 
 - New CCF annotation volume with complete cortical areas and layers.
-- Mouse Connectivity structure unionize records have been computed for new CCF.  Previous records are available here: http://download.alleninstitute.org/informatics-archive/june-2016/mouse_projection/
+- Mouse Connectivity structure unionize records have been computed for new CCF.  Previous records are available here: <http://download.alleninstitute.org/informatics-archive/june-2016/mouse_projection/>
 - Github issue #27 - MouseConnectivityCache.get_structure_unionizes returns only requested structures, not all descendants.  Added a separate argument for descendant inclusion.
 
 ### Added
@@ -474,7 +541,7 @@ ABS-85; allow variable long square start time in ephys feature extractor
 
 - CellTypesCache.get_cells has a new argument 'reporter_status', which accepts one or more ReporterStatus values.
 - CellTypesApi.save_reconstruction_marker and CellTypesCache.get_reconstruction_marker download and open files containing positions that mark special points in reconstruction (truncation, early termination of reconstruction, etc).
-- swc.read_marker_file for reading in marker files 
+- swc.read_marker_file for reading in marker files
 - Morphology has new methods for manipulating the morphology tree structure
 - allensdk.model.biophysical package supports active and passive models
 
@@ -517,7 +584,6 @@ ABS-85; allow variable long square start time in ephys feature extractor
 - Cache.wrap method defaults to returning json rather than a pandas dataframe (new parameter return_dataframe=False).
 - BiophysicalApi.cache_data throws an exception if no data is found for a neuronal model id.
 - Replaced brainscales Dockerfile with neuralenseble Dockerfiles.
-
 
 ## [0.10.1] - 2015-x-x
 

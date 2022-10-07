@@ -2,7 +2,7 @@
 advance open science! For full contribution guidelines check out our
 guide on GitHub here, https://github.com/AllenInstitute/AllenSDK/blob/master/CONTRIBUTING.md-->
 
-# Overview:
+# Overview
 <!-- Give a brief overview of the issue you are solving. Succinctly
 explain the GitHub issue you are addressing and the underlying problem
 of the ticket. The commit header and body should also include this
@@ -14,12 +14,12 @@ resolution is (0,0). It was found through investigation that the
 experiment database query was returning a 0 pixel resolution for this
 experiment.-->
 
-# Addresses:
+# Addresses
 <!-- Add a link to the issue on Github board
 example: 
 Addresses issue [#1234](git_hub_ticket_url)-->
 
-# Type of Fix:
+# Type of Fix
 <!--Chose One-->
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
@@ -27,7 +27,7 @@ Addresses issue [#1234](git_hub_ticket_url)-->
       functionality to not work as expected)
 - [ ] Documentation Change
 
-# Solution:
+# Solution
 <!-- Outline your solution to the previously described issue and
 underlying cause. This section should include a brief description of
 your proposed solution and how it addresses the cause of the ticket
@@ -40,7 +40,7 @@ from actual resolution that wasn't saved, images might appear very distorted.
 An alternative solution is to update the database to cover the missing 
 experiment resolutions.-->
 
-# Changes:
+# Changes
 <!-- Include a bulleted list or check box list of the implemented changes
 in brief, as well as the addition of supplementary materials(unit tests,
 integration tests, etc
@@ -50,7 +50,7 @@ example:
 - Unit tests for the resolution gettr function to test for various edge cases
 -->
 
-# Validation:
+# Validation
 <!-- Describe how you have validated that your solution addresses the
 root cause of the ticket. What have you done to ensure that your
 addition is bug free and works as expected? Please provide specific
@@ -63,12 +63,16 @@ example:
 - Description of unit test cases
 - Attached script to create max and avg projections of behavior session
 - Windows 10.x.x.x, Surface Book 2 baseline, Conda Version 1.x.x-->
-### Screenshots:
-### Unit Tests:
-### Script to reproduce error and fix:
-### Configuration details:
+### Screenshots
+
+### Unit Tests
+
+### Script to reproduce error and fix
+
+### Configuration details
 
 # Checklist
+
 - [ ] My code follows
       [Allen Institute Contribution Guidelines](https://github.com/AllenInstitute/AllenSDK/blob/master/CONTRIBUTING.md)
 - [ ] My code is unit tested and does not decrease test coverage
@@ -82,7 +86,7 @@ example:
       rc/x.y.z as its merge target
 - [ ] My code passes all AllenSDK tests
 
-# Notes:
+# Notes
 <!-- Use this section to add anything you think worth mentioning to the
 reader of the issue
 example:

@@ -4,6 +4,9 @@
 htmlcov
 .settings
 dist
+.bamboo
+.github
+.venv
 .eggs/
 eggs/
 *.egg-info/
