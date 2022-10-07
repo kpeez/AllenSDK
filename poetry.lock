@@ -423,7 +423,7 @@ pynwb = ">=1.1.2"
 
 [[package]]
 name = "nest-asyncio"
-version = "1.5.6"
+version = "1.5.5"
 description = "Patch asyncio to allow nested event loops"
 category = "main"
 optional = false
@@ -983,7 +983,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.12"
-content-hash = "8a50897b16fb09225336d73a990c04af821721e4744140b82d3d874f1d224952"
+content-hash = "035b0234bd15e3e8ccf7b9c660f283a28af6aac545d221f575209173e454aadc"
 
 [metadata.files]
 aiohttp = [
@@ -1664,8 +1664,8 @@ ndx-events = [
     {file = "ndx_events-0.2.0-py2.py3-none-any.whl", hash = "sha256:9db80ab09b11979c1678d948f6a7cb7ee2833f3d743e660391b731f6c15320af"},
 ]
 nest-asyncio = [
-    {file = "nest_asyncio-1.5.6-py3-none-any.whl", hash = "sha256:b9a953fb40dceaa587d109609098db21900182b16440652454a146cffb06e8b8"},
-    {file = "nest_asyncio-1.5.6.tar.gz", hash = "sha256:d267cc1ff794403f7df692964d1d2a3fa9418ffea2a3f6859a439ff482fef290"},
+    {file = "nest_asyncio-1.5.5-py3-none-any.whl", hash = "sha256:b98e3ec1b246135e4642eceffa5a6c23a3ab12c82ff816a92c612d68205813b2"},
+    {file = "nest_asyncio-1.5.5.tar.gz", hash = "sha256:e442291cd942698be619823a17a86a5759eabe1f8613084790de189fe9e16d65"},
 ]
 networkx = [
     {file = "networkx-2.8.7-py3-none-any.whl", hash = "sha256:15cdf7f7c157637107ea690cabbc488018f8256fa28242aed0fb24c93c03a06d"},
