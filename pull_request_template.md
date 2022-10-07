@@ -14,12 +14,12 @@ resolution is (0,0). It was found through investigation that the
 experiment database query was returning a 0 pixel resolution for this
 experiment.-->
 
-# Addresses
+## Addresses
 <!-- Add a link to the issue on Github board
 example: 
 Addresses issue [#1234](git_hub_ticket_url)-->
 
-# Type of Fix
+## Type of Fix
 <!--Chose One-->
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
@@ -27,7 +27,7 @@ Addresses issue [#1234](git_hub_ticket_url)-->
       functionality to not work as expected)
 - [ ] Documentation Change
 
-# Solution
+## Solution
 <!-- Outline your solution to the previously described issue and
 underlying cause. This section should include a brief description of
 your proposed solution and how it addresses the cause of the ticket
@@ -40,7 +40,7 @@ from actual resolution that wasn't saved, images might appear very distorted.
 An alternative solution is to update the database to cover the missing 
 experiment resolutions.-->
 
-# Changes
+## Changes
 <!-- Include a bulleted list or check box list of the implemented changes
 in brief, as well as the addition of supplementary materials(unit tests,
 integration tests, etc
@@ -50,7 +50,7 @@ example:
 - Unit tests for the resolution gettr function to test for various edge cases
 -->
 
-# Validation
+## Validation
 <!-- Describe how you have validated that your solution addresses the
 root cause of the ticket. What have you done to ensure that your
 addition is bug free and works as expected? Please provide specific
