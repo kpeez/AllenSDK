@@ -344,7 +344,7 @@ tests = ["pytest", "pytz", "simplejson"]
 
 [[package]]
 name = "matplotlib"
-version = "3.4.2"
+version = "3.4.0"
 description = "Python plotting package"
 category = "main"
 optional = false
@@ -905,7 +905,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10,<3.12"
-content-hash = "19687801600b7dc0578f4690bc2494b028535682213e3879e18c7b9ad177b66e"
+content-hash = "26b7c109cc51a2419fd04c94b5194f0320b0959d291660440835f40d57b87862"
 
 [metadata.files]
 aiohttp = [
@@ -1403,25 +1403,25 @@ marshmallow = [
     {file = "marshmallow-3.18.0.tar.gz", hash = "sha256:6804c16114f7fce1f5b4dadc31f4674af23317fcc7f075da21e35c1a35d781f7"},
 ]
 matplotlib = [
-    {file = "matplotlib-3.4.2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:c541ee5a3287efe066bbe358320853cf4916bc14c00c38f8f3d8d75275a405a9"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:3a5c18dbd2c7c366da26a4ad1462fe3e03a577b39e3b503bbcf482b9cdac093c"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:a9d8cb5329df13e0cdaa14b3b43f47b5e593ec637f13f14db75bb16e46178b05"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:7ad19f3fb6145b9eb41c08e7cbb9f8e10b91291396bee21e9ce761bb78df63ec"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-win32.whl", hash = "sha256:7a58f3d8fe8fac3be522c79d921c9b86e090a59637cb88e3bc51298d7a2c862a"},
-    {file = "matplotlib-3.4.2-cp37-cp37m-win_amd64.whl", hash = "sha256:6382bc6e2d7e481bcd977eb131c31dee96e0fb4f9177d15ec6fb976d3b9ace1a"},
-    {file = "matplotlib-3.4.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:6a6a44f27aabe720ec4fd485061e8a35784c2b9ffa6363ad546316dfc9cea04e"},
-    {file = "matplotlib-3.4.2-cp38-cp38-manylinux1_i686.whl", hash = "sha256:1c1779f7ab7d8bdb7d4c605e6ffaa0614b3e80f1e3c8ccf7b9269a22dbc5986b"},
-    {file = "matplotlib-3.4.2-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:5826f56055b9b1c80fef82e326097e34dc4af8c7249226b7dd63095a686177d1"},
-    {file = "matplotlib-3.4.2-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:0bea5ec5c28d49020e5d7923c2725b837e60bc8be99d3164af410eb4b4c827da"},
-    {file = "matplotlib-3.4.2-cp38-cp38-win32.whl", hash = "sha256:6475d0209024a77f869163ec3657c47fed35d9b6ed8bccba8aa0f0099fbbdaa8"},
-    {file = "matplotlib-3.4.2-cp38-cp38-win_amd64.whl", hash = "sha256:21b31057bbc5e75b08e70a43cefc4c0b2c2f1b1a850f4a0f7af044eb4163086c"},
-    {file = "matplotlib-3.4.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:b26535b9de85326e6958cdef720ecd10bcf74a3f4371bf9a7e5b2e659c17e153"},
-    {file = "matplotlib-3.4.2-cp39-cp39-manylinux1_i686.whl", hash = "sha256:32fa638cc10886885d1ca3d409d4473d6a22f7ceecd11322150961a70fab66dd"},
-    {file = "matplotlib-3.4.2-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:956c8849b134b4a343598305a3ca1bdd3094f01f5efc8afccdebeffe6b315247"},
-    {file = "matplotlib-3.4.2-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:85f191bb03cb1a7b04b5c2cca4792bef94df06ef473bc49e2818105671766fee"},
-    {file = "matplotlib-3.4.2-cp39-cp39-win32.whl", hash = "sha256:b1d5a2cedf5de05567c441b3a8c2651fbde56df08b82640e7f06c8cd91e201f6"},
-    {file = "matplotlib-3.4.2-cp39-cp39-win_amd64.whl", hash = "sha256:df815378a754a7edd4559f8c51fc7064f779a74013644a7f5ac7a0c31f875866"},
-    {file = "matplotlib-3.4.2.tar.gz", hash = "sha256:d8d994cefdff9aaba45166eb3de4f5211adb4accac85cbf97137e98f26ea0219"},
+    {file = "matplotlib-3.4.0-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:fe4676d7f25d2915562aa551996843e97e7d25aefc54617a3b0fe74a967bc2c8"},
+    {file = "matplotlib-3.4.0-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:e879b5915f0c8e765d0e1ae4ecf93fafbde4a1dee88409427ac0ca55d31a41a9"},
+    {file = "matplotlib-3.4.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:8b046715f710b58dc89241eb3c8e907a30b269e915df6a134bb419f05a6507bf"},
+    {file = "matplotlib-3.4.0-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:7e76956b8dd4bd8a6be71e401e4a24d975e57d5849a80c24a35551040ff82df0"},
+    {file = "matplotlib-3.4.0-cp37-cp37m-win32.whl", hash = "sha256:3847ce29a01e1d1f0aa691263e510ce8504a20d158a811ed3a45c4c1d9e708e7"},
+    {file = "matplotlib-3.4.0-cp37-cp37m-win_amd64.whl", hash = "sha256:3c617fc6f7d6ac0c6142e34f3066520273195c75fb5371eabfddb3da04a75174"},
+    {file = "matplotlib-3.4.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:85388289b356f5f19464b84eaa7532cd10d3f701505ae8d988b3dfb1332d785f"},
+    {file = "matplotlib-3.4.0-cp38-cp38-manylinux1_i686.whl", hash = "sha256:7571d470cd5df2d6c27ee0e6dabbebd130eae91da19c3749c6946918f8bcad49"},
+    {file = "matplotlib-3.4.0-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:2b54bbce73115f6f95912f57348b2e0fc03cc86a09c73191f1216d79c16cda3c"},
+    {file = "matplotlib-3.4.0-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:85d7b8da66bb71054f3d73210b4fe24cca8afc6f92f00569b2ad24ca32438034"},
+    {file = "matplotlib-3.4.0-cp38-cp38-win32.whl", hash = "sha256:a2828982c5329cceea67bae0af49e2bfae3471499d6d6aa4359efa0ef491b0f7"},
+    {file = "matplotlib-3.4.0-cp38-cp38-win_amd64.whl", hash = "sha256:3bcee5685afb76d2a31f8a6b190caf2e52be250d214155b91830110416767de3"},
+    {file = "matplotlib-3.4.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:a960ee5a139011e1d203df75eafc4e98013927f36ab69510313bc7d9d4641e38"},
+    {file = "matplotlib-3.4.0-cp39-cp39-manylinux1_i686.whl", hash = "sha256:133469eb5d54a0a963d08a07356d03f6de41b6789f2a9d15aed0e6f3aabbf502"},
+    {file = "matplotlib-3.4.0-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:36e2f68b7d2f22eacc4d9d4dfdf3a975c9db31fa6e36e16a2d60bf4c1ff5a35c"},
+    {file = "matplotlib-3.4.0-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:966a1bb53ce56dcd542b4edb667166aac14c8eaf2a3acd68f403eccedf0d21a7"},
+    {file = "matplotlib-3.4.0-cp39-cp39-win32.whl", hash = "sha256:4002b0928bcd695eb7f23bf18c52e3cf23501a9c06a1de596079d74932aa4068"},
+    {file = "matplotlib-3.4.0-cp39-cp39-win_amd64.whl", hash = "sha256:fa0f7f3b2a0067ee5806264478f39fa52d7ddf8ee9b3012e5257b2ff39a15e0b"},
+    {file = "matplotlib-3.4.0.tar.gz", hash = "sha256:424ddb3422c65b284a38a97eb48f5cb64b66a44a773e0c71281a347f1738f146"},
 ]
 multidict = [
     {file = "multidict-6.0.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:0b9e95a740109c6047602f4db4da9949e6c5945cefbad34a1299775ddc9a62e2"},
